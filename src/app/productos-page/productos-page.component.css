@@ -1,0 +1,9 @@
+.productos-page-container {
+  width: 100%;
+  height: 100%;
+}
+app-productos {
+  position: absolute;
+  margin-top: 10vh;
+
+}

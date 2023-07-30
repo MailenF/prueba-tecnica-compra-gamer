@@ -1,0 +1,78 @@
+.imgenes-container {
+  position: absolute;
+  z-index: 1;
+  top: 25%;
+  left: 12%;
+}
+.imgenes-container img {
+  width: 190px;
+}
+.frase {
+  position: absolute;
+  top: 25%;
+  left: 60%;
+  transform: translate(-50%);
+  text-align: center;
+  z-index: 1;
+  color: #fff; /* Puedes cambiar el color de la frase según el diseño */
+}
+.frase h1 {
+  font-size: 50px;
+  line-height: 1.3;
+}
+
+@media only screen and (max-width: 1700px) {
+  .imgenes-container img {
+    width: 170px;
+  }
+  .frase {
+    left: 64%;
+  }
+
+}
+@media only screen and (max-width: 1450px) {
+  .imgenes-container img {
+    width: 140px;
+  }
+}
+
+@media only screen and (max-width: 1250px) {
+  .imgenes-container {
+    left: 10%;
+  }
+  .imgenes-container img {
+    width: 120px;
+  }
+  .frase {;
+    left: 66%;
+  }
+  .frase h1 {
+    font-size: 40px;
+    line-height: 1.3;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .imgenes-container img {
+    width: 100px;
+  }
+  .frase {;
+    left: 68%;
+  }
+  .frase h1 {
+    font-size: 30px;
+    line-height: 1.3;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .imgenes-container img {
+    width: 80px;
+  }
+  .frase {;
+    left: 68%;
+  }
+  .frase h1 {
+    font-size: 20px;
+  }
+}

@@ -7,7 +7,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgb(66, 1, 102);
+  background: rgba(225, 225, 225, 0.2);
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
   border-radius: 20px;
   backdrop-filter: blur(10px);
@@ -21,11 +21,11 @@
   align-items: center;
 }
 .left-section .logo {
-    color: #ffffff;
-    font-weight: 700;
-    text-decoration: none;
-    font-size: 2em;
-  }
+  color: #ffffff;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 2em;
+}
 .center-section {
   flex: 1;
   text-align: center;
@@ -41,7 +41,7 @@
 }
 .menu li a:hover {
   padding-bottom: 4px;
-  border-bottom: 3px solid #ffffff;
+  border-bottom: 3px solid #2500f5;
 }
 .menu li:last-child {
   margin-right: 0;
