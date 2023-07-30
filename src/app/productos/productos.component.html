@@ -1,0 +1,19 @@
+<mat-drawer-container class="example-container" autosize xmlns="">
+  <mat-drawer #drawer class="example-sidenav" mode="side">
+    <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p>
+    <div class="container-subcategorias" *ngFor="let subcat of subcategorias" >
+        <p class="nombre-subcategoria" (click)="elegirSubcategoria(subcat.id)">{{subcat.nombre}}</p>
+      <mat-divider></mat-divider>
+    </div>
+  </mat-drawer>
+
+  <div class="example-sidenav-content">
+    <button class="button-filter" type="button" mat-raised-button color="primary" (click)="toggleDrawer()">
+      Filtrar
+    </button>
+    <h1>NUESTROS PRODUCTOS</h1>
+
+  <app-card-producto></app-card-producto>
+
+  </div>
+</mat-drawer-container>

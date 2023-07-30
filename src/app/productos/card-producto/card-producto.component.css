@@ -1,0 +1,40 @@
+.productos-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  cursor: pointer;
+}
+.producto {
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid #d7d7d7;
+  color: black;
+  text-align: center;
+  width: 240px;
+  /*height: 340px;*/
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1.2rem;
+  margin: 2rem;
+}
+.producto img {
+  width: 150px;
+  margin: 1rem;
+  transition: transform 0.3s;
+}
+.producto:hover img {
+  transform: scale(1.1);
+}
+.producto:hover {
+  box-shadow: 5px 15px 25px #7f7f7f;
+}
+.info .producto-title {
+  font-weight: bold;
+}
+.info .producto-price {
+  font-size: 16px;
+}

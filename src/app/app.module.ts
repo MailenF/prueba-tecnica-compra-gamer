@@ -14,12 +14,23 @@ import { ContactoPageComponent } from './contacto-page/contacto-page.component';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatListModule } from '@angular/material/list';
+
 
 import { HttpClientModule } from '@angular/common/http';
 import { InicioSesionPageComponent } from './inicio-sesion-page/inicio-sesion-page.component';
+import { ProductosComponent } from './productos/productos.component';
+import { CardProductoComponent } from './productos/card-producto/card-producto.component';
+import { CarritoPageComponent } from './carrito-page/carrito-page.component';
+import { CarritoPageWebComponent } from './carrito-page/carrito-page-web/carrito-page-web.component';
+import { ToolbarHomeComponent } from './toolbar-home/toolbar-home.component';
+import { CardCarritoComponent } from './carrito-page/card-carrito/card-carrito.component';
+import { TotalCarritoComponent } from './carrito-page/total-carrito/total-carrito.component';
+import { BackgroundComponent } from './home-page/background/background.component';
 
-
-
+import { CurrencyPipe } from '@angular/common';
 
 
 @NgModule({
@@ -32,6 +43,14 @@ import { InicioSesionPageComponent } from './inicio-sesion-page/inicio-sesion-pa
     SobreNosotrosPageComponent,
     ContactoPageComponent,
     InicioSesionPageComponent,
+    ProductosComponent,
+    CardProductoComponent,
+    CarritoPageComponent,
+    CarritoPageWebComponent,
+    ToolbarHomeComponent,
+    CardCarritoComponent,
+    TotalCarritoComponent,
+    BackgroundComponent,
   ],
   imports: [
     BrowserModule,
@@ -40,9 +59,12 @@ import { InicioSesionPageComponent } from './inicio-sesion-page/inicio-sesion-pa
     MatIconModule,
     MatCardModule,
     MatButtonModule,
-    HttpClientModule
+    MatSidenavModule,
+    HttpClientModule,
+    MatDividerModule,
+    MatListModule,
   ],
-  providers: [],
+  providers: [CurrencyPipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

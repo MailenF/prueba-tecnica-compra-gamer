@@ -1,0 +1,17 @@
+<div class="productos-card">
+  <div class="producto"  *ngFor="let producto of productos">
+    <ng-container *ngFor="let img of producto.imagenes">
+      <img mat-card-image src="https://compragamer.net/pga/imagenes_publicadas/compragamer_Imganen_general_{{img.nombre}}-med.jpg"  alt="">
+    </ng-container>
+    <div class="info">
+      <h4 class="producto-title">{{producto.nombre}}</h4>
+      <p class="producto-price">
+        Precio: {{calcularPrecioTotal(producto.precio, producto.iva) }}
+      </p>
+      <p class="subcategoria">
+        {{ filtrarSubCategoris(producto.id_subcategoria) }}
+      </p>
+      <button mat-raised-button color="primary" (click)="agregarProducto(producto)">AGREGAR</button>
+    </div>
+  </div>
+</div>

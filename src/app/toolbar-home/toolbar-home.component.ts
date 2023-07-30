@@ -2,11 +2,11 @@ import {Component, OnInit} from '@angular/core';
 import {CarritoComprasService} from "../services/carrito-compras.service";
 
 @Component({
-  selector: 'app-toolbar',
-  templateUrl: './toolbar.component.html',
-  styleUrls: ['./toolbar.component.css']
+  selector: 'app-toolbar-home',
+  templateUrl: './toolbar-home.component.html',
+  styleUrls: ['./toolbar-home.component.css']
 })
-export class ToolbarComponent implements OnInit{
+export class ToolbarHomeComponent implements OnInit{
 
   cantidadProductos: number = 0;
 
