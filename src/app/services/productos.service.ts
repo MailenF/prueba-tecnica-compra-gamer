@@ -15,7 +15,7 @@ export class ProductosService {
   private productosSubCategoria: Productos[] = [];
   private _productosSubCategopris$: BehaviorSubject<Productos[]>;
 
-  private subcategoria: Subcategorias[] = [];
+
   private _subcategoria$: BehaviorSubject<Subcategorias[]>;
 
   constructor(private http: HttpClient) {
@@ -35,6 +35,8 @@ export class ProductosService {
 
   //Dejar sólo las subcategorias que tienen productos asignados, si alguna subcategoria no coincide con algun producto no se muestra
   subCategoriasFilter() {
+    const subCategorias = this._subcategoria$.getValue();
+
     this.obtenerProductos().subscribe((productos: Productos[]) => {
       this.obtenerSubcategorias().subscribe((subcategorias: Subcategorias[]) => {
 
@@ -44,18 +46,18 @@ export class ProductosService {
           );
 
           if (subcategoriaEncontrada) {
-            const existeSubcategoria = this.subcategoria.some(
+            const existeSubcategoria = subCategorias.some(
               (subcategoria) => subcategoria.id === subcategoriaEncontrada.id
             );
 
             if (!existeSubcategoria) {
-              this.subcategoria.push(subcategoriaEncontrada);
+              subCategorias.push(subcategoriaEncontrada);
             }
           }
         });
       });
     });
-    this._subcategoria$.next(this.subcategoria);
+    this._subcategoria$.next(subCategorias);
   }
 
   get subCategorias(): Observable<Subcategorias[]> {
