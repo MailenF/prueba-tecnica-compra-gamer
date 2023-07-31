@@ -1,0 +1,44 @@
+<div class="formulario-container">
+  <p>Registro Usuario</p>
+  <form [formGroup]="formulario" (submit)="enviarFormulario()">
+    <div class="container-block">
+      <mat-form-field appearance="fill">
+        <mat-label>Nombre</mat-label>
+        <input matInput formControlName="nombre" />
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Apellido</mat-label>
+        <input matInput formControlName="apellido" />
+      </mat-form-field>
+    </div>
+    <div class="container-block">
+      <mat-form-field appearance="fill">
+        <mat-label>DNI</mat-label>
+        <input matInput formControlName="dni" />
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Teléfono</mat-label>
+        <input matInput formControlName="telefono" />
+      </mat-form-field>
+    </div>
+    <mat-form-field appearance="fill">
+      <mat-label>Email</mat-label>
+      <input type="email" matInput formControlName="email" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Password</mat-label>
+      <input type="password" matInput formControlName="password" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Validar Password</mat-label>
+      <input type="password" matInput formControlName="validarPassword" />
+    </mat-form-field>
+
+      <button mat-raised-button color="primary" type="submit" [disabled]="formulario.invalid">Enviar</button>
+
+  </form>
+</div>
