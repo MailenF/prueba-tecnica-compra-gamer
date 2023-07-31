@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { CurrencyPipe } from '@angular/common';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,10 +18,13 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatListModule } from '@angular/material/list';
-
-
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatSelectModule} from '@angular/material/select';
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { HttpClientModule } from '@angular/common/http';
-import { InicioSesionPageComponent } from './inicio-sesion-page/inicio-sesion-page.component';
+
+
 import { ProductosComponent } from './productos/productos.component';
 import { CardProductoComponent } from './productos/card-producto/card-producto.component';
 import { CarritoPageComponent } from './carrito-page/carrito-page.component';
@@ -29,8 +33,8 @@ import { ToolbarHomeComponent } from './toolbar-home/toolbar-home.component';
 import { CardCarritoComponent } from './carrito-page/card-carrito/card-carrito.component';
 import { TotalCarritoComponent } from './carrito-page/total-carrito/total-carrito.component';
 import { BackgroundComponent } from './home-page/background/background.component';
-
-import { CurrencyPipe } from '@angular/common';
+import { RegistroUsuarioComponent } from './registro-usuario/registro-usuario.component';
+import { FormRegistroComponent } from './registro-usuario/form-registro/form-registro.component';
 
 
 @NgModule({
@@ -42,7 +46,6 @@ import { CurrencyPipe } from '@angular/common';
     ProductosPageComponent,
     SobreNosotrosPageComponent,
     ContactoPageComponent,
-    InicioSesionPageComponent,
     ProductosComponent,
     CardProductoComponent,
     CarritoPageComponent,
@@ -51,6 +54,8 @@ import { CurrencyPipe } from '@angular/common';
     CardCarritoComponent,
     TotalCarritoComponent,
     BackgroundComponent,
+    RegistroUsuarioComponent,
+    FormRegistroComponent,
   ],
   imports: [
     BrowserModule,
@@ -63,6 +68,11 @@ import { CurrencyPipe } from '@angular/common';
     HttpClientModule,
     MatDividerModule,
     MatListModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [CurrencyPipe],
   bootstrap: [AppComponent]
