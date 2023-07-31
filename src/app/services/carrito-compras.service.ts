@@ -6,7 +6,6 @@ import {BehaviorSubject, Observable} from "rxjs";
   providedIn: 'root'
 })
 export class CarritoComprasService {
-  private carritoProductos: Productos[] = [];
   private _carritoProductos$: BehaviorSubject<Productos[]>;
 
   constructor() {
@@ -14,8 +13,9 @@ export class CarritoComprasService {
   }
 
   agregarProducto(producto: Productos) {
-    this.carritoProductos.push(producto);
-    this._carritoProductos$.next(this.carritoProductos);
+    const carritoProductos = this._carritoProductos$.getValue();
+    carritoProductos.push(producto);
+    this._carritoProductos$.next(carritoProductos);
   }
 
   get productos(): Observable<Productos[]> {
@@ -23,7 +23,8 @@ export class CarritoComprasService {
   }
 
   eliminarProducto(index: number) {
-    this.carritoProductos.splice(index, 1);
-    this._carritoProductos$.next(this.carritoProductos);
+    const carritoProductos = this._carritoProductos$.getValue();
+    carritoProductos.splice(index, 1);
+    this._carritoProductos$.next(carritoProductos);
   }
 }

@@ -7,7 +7,6 @@ import {Usuarios} from "../interfaces/usuarios";
 export class UsuariosService {
 
   private usuariosRegistrados: Usuarios[] = [];
-  private usuariosObtenidos: Usuarios[] = [];
 
   constructor() { }
 
