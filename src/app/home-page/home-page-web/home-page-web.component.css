@@ -8,3 +8,8 @@ img {
   max-height: 70%;
 }
 
+@media only screen and (max-width: 550px) {
+ app-background {
+   display: none;
+ }
+}

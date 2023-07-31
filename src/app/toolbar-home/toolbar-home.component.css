@@ -73,7 +73,6 @@
   font-size: 30px;
   cursor: pointer;
 }
-
 .numero-carrito {
   position: absolute;
   top: 6px;
@@ -87,4 +86,27 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media only screen and (max-width: 550px) {
+  .toolbar-container {
+    padding: 20px 0;
+  }
+  .left-section .logo {
+    font-weight: 0;
+    font-size: 1em;
+  }
+  .menu a {
+    font-size: 12px;
+  }
+  .login {
+    margin-right: 10px;
+    font-size: 12px;
+  }
+  .carrito-icon {
+    font-size: 20px;
+  }
+  .numero-carrito {
+    top: 0;
+    right: 0;
+  }
 }

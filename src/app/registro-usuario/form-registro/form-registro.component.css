@@ -34,4 +34,10 @@ button {
     top: 400px;
   }
 }
-
+@media only screen and (max-width: 550px) {
+  .formulario-container {
+    margin-top: 100px;
+    width: 300px;
+    height: 700px;
+  }
+}
